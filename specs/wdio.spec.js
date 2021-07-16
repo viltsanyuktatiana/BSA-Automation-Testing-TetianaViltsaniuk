@@ -4,7 +4,7 @@ const rundomNumber = () => Date.now();
 
 describe('Registration:', function () {
 
-  it('should be able to register', async function () {
+  xit('should be able to register', async function () {
 
     await browser.setWindowSize(1440, 960);
     await browser.url('/sign-up');
