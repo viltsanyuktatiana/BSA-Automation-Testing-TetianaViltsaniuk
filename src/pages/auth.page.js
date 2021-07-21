@@ -34,6 +34,23 @@ class AuthPage {
 
     await this.submitButton.click();
   }
+  async authorization({ email, password }){
+
+    await this.emailField.setValue(email);
+    await this.passwordField.setValue(password);
+    await this.submitButton.click();
+  }
+  async profile({ name, surname, birthDate, phone, gender }) {
+    await this.usernameField.setValue(name);
+    await this.surnameField.setValue(surname);
+    await this.birthDateField.setValue(birthDate);
+    await this.phoneField.setValue(phone);
+
+    await this.genderDdl.click();
+    await this.ddlOption.clickByText(gender);
+
+    await this.submitButton.click();
+  }
 }
 
 module.exports = { AuthPage };

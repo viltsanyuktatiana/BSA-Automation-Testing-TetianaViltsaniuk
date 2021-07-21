@@ -76,9 +76,3 @@ describe('Authorization', function () {
   });
 
 });
-
-async function checkByText (tag, text) {
-  const error = await $(tag);
-  const textError = await error.getText();
-  return textError === text;
-}
